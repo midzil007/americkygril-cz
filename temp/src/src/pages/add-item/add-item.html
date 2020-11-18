@@ -1,0 +1,36 @@
+<ion-header>
+  <custom-header></custom-header>
+</ion-header>
+  
+<ion-content>
+ 
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="getItems($event)"></ion-searchbar>
+
+
+  <ion-list>
+    <ion-item *ngFor="let item of items" >
+    
+        <button ion-button item-start (click)="addToList(item)">
+   + PŘIDAT
+</button> 
+    <button ion-button  item-start class="button-view" (click)="detailItem(item)">
+  ZOBRAZIT  
+</button> 
+
+<a item-start (click)="viewItem(item)">
+  <strong>{{item.title}}</strong>
+</a> 
+    </ion-item>  
+  </ion-list>
+
+
+
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>   <button ion-button  item-start class="button-view" (click)="detailItem(item)">
+  ZOBRAZIT
+</button> </ion-title>
+  </ion-toolbar>
+</ion-footer>

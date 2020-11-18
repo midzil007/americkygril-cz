@@ -1,0 +1,21 @@
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>   
+    <button ion-button  item-end icon-left class="button-view" (click)="showPage('CustomerPage')">
+      <ion-icon name="settings"> </ion-icon> MÉ ÚDAJE  
+    </button>
+     <button ion-button  item-end icon-left class="button-view" (click)="showPage('AddItemPage')">
+    <ion-icon name="heart"></ion-icon> KÁVOVARY   
+    </button>
+    <button *ngIf="show" ion-button  item-end icon-left class="button-view" (click)="showPage('MachineListPage')"> 
+     <ion-icon name="cart"></ion-icon> PŘÍSLUŠENSTVÍ   
+    </button>
+    <button ion-button  item-end icon-left class="button-view" (click)="showPage('ContactPage')">
+      <ion-icon name="construct"></ion-icon> ÚDRŽBA  
+    </button>
+       <button ion-button  item-end icon-left class="button-view" (click)="showPage('ContactPage')">
+      <ion-icon name="contact"></ion-icon> KONTAKT  
+    </button>
+</ion-title>  
+  </ion-toolbar>
+</ion-footer>

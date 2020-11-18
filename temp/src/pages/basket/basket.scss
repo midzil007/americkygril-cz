@@ -1,0 +1,16 @@
+page-basket {
+
+}
+ .container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .item {
+    width: 50%;
+  }
+  .other{
+  	background-color: #ce000c;
+  	color: white;
+  	padding: 10px 5px 10px 15px;
+  	font-size: 1.5em;
+  }

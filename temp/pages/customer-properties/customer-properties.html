@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Mléčné cesty
+    </ion-title>
+
+    <ion-buttons>
+      <button ion-button clear large navPop>
+        <ion-icon name="arrow-round-back"></ion-icon> Zpět
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+<ion-card>
+  <ion-card-header>
+  <strong>Mléčné cesty</strong>
+  </ion-card-header>
+  <ion-card-content>
+<ion-list>
+<div class="radio-item">
+    <p>Má váš kávovar mléčné cesty</p>  
+    <ion-checkbox [(ngModel)]="milkWays"></ion-checkbox>
+ </div>
+ </ion-list>
+ <button padding ion-button full (click)="saveMilkWay()">ULOŽIT</button> 
+ </ion-card-content>
+</ion-card>
+<ion-card class="no-padding">
+  <img src="img/photo-47244.jpg">
+</ion-card>
+</ion-content> 
+ 

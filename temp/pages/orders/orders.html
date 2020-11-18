@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+    	Mé objednávky
+    </ion-title>
+
+    <ion-buttons>
+      <button ion-button clear large navPop>
+        <ion-icon name="arrow-round-back"></ion-icon> Zpět
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<ion-card>
+  <ion-card-header>
+  <strong>Vyřízené objednávky</strong>
+  </ion-card-header>
+  </ion-card>
+   <ion-card>
+  <div *ngFor="let item of listOrders" >
+  <button ion-item (click)="showOrder(item)"> 
+  <table>
+  	<tr>
+  	<td>{{item.id}}</td>
+  	<td>{{item.created}}</td>
+  	<td class="green">{{item.suma}} Kč</td> 
+  	</tr>
+  </table>
+  </button>
+  </div>
+   <button padding ion-button full (click)="backTo()">ZPĚT</button> 
+ </ion-card>
+</ion-content>
