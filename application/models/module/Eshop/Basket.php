@@ -1249,15 +1249,15 @@ no:</td>
 				// $file = $mail->createAttachment($fileContents);
 				// $file->filename = "Formular_pro_vraceni_zbozi.docx";
 
-				$filePath = Utils::getWebUrl().'/attachment/Formular_pro_vraceni_zbozi.doc';
-				$fileContents = file_get_contents($filePath);
-				$file = $mail->createAttachment($fileContents);   
-				$file->filename = "Formular_pro_vraceni_zbozi.doc";
-
-				$filePath1 = Utils::getWebUrl().'/attachment/obchodni_podminky.cz.pdf';
-				$fileContents1 = file_get_contents($filePath1);
-				$filePdf = $mail->createAttachment($fileContents1);
-				$filePdf->filename = "obchodni_podminky.cz.pdf";
+			//	$filePath = Utils::getWebUrl().'/attachment/Formular_pro_vraceni_zbozi.doc';
+		//		$fileContents = file_get_contents($filePath);
+		//		$file = $mail->createAttachment($fileContents);   
+		//		$file->filename = "Formular_pro_vraceni_zbozi.doc";
+//
+//				$filePath1 = Utils::getWebUrl().'/attachment/obchodni_podminky.cz.pdf';
+//				$fileContents1 = file_get_contents($filePath1);
+//				$filePdf = $mail->createAttachment($fileContents1);
+//				$filePdf->filename = "obchodni_podminky.cz.pdf";
 
 				$mail->setFrom("prodej@prodej.cz", 'Americkygril.cz');
 				    
