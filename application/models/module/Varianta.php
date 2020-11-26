@@ -9,7 +9,7 @@ class module_Varianta{
 		1 => 'SKLADEM',  
 		2 => 'Není skladem', 
 		3 => 'Produkt je dočasně nedostupný',
-		4 => 'Do týdne',
+		4 => 'Na dotaz',
 	);
 	// varianta_'name' -> property
 	public $variantProperty = array  
@@ -21,7 +21,7 @@ class module_Varianta{
 		1 => 'SKLADEM',  
 		2 => 'Není skladem',  
 		3 => 'Produkt je dočasně nedostupný',
-		4 => 'Do týdne'               
+		4 => 'Na dotaz'                 
 	)),  
 	//	'obrazky' =>  array('cMap'=> 'Obrázky', 'type' => 'MultiFileSelect','options' => array('showSelectFile' => true, 'inputWidth' => '300', 'maxFiles' => 20, 'showUploadFile' => true, 'uploadFileDirectoryNodeId' => 3880 )),
 		'price' =>  array('cMap'=> 'Cena', 'type' => 'Text', 'options'=> array('class' => 'validate[required,custom[onlyFloatVarPrice]] text-input')),
@@ -72,6 +72,8 @@ class module_Varianta{
 		$this->tree = Zend_Registry::getInstance ()->tree;
 		$this->sklaOptions = $skladOptions;
 	}
+
+	
 
 	public function getProductByExtId($ext_id)
 	{  
@@ -128,6 +130,11 @@ class module_Varianta{
 		$where = $this->db->quoteInto('id =?',$input->variantId);           
 		$this->db->update($this->_tableName,array('inv_title'=>$input->data),$where); 	
 	}     
+
+	public function getSklademName($value)
+	{
+		return $this->skladOptions[$value];
+	}
 
 	public function getSkladem($value, $p = false, $showTxt = true)
 	{

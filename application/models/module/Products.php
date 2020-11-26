@@ -1715,7 +1715,10 @@ public function getWordPieces($count)
 		 
 		  if($params['onSection']){
          	$select->where('onSection =?', '1');
-         }
+		 }
+		 if($params['published']){
+			$select->where('state =?', 'PUBLISHED');
+		}
 		  
 		
      {

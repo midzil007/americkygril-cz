@@ -255,7 +255,8 @@ class module_ImportAdmin
 		$data = simplexml_load_file($urlFeed); 
 		foreach ($data as $item) {
 			$this->setProduct($item)  ;        	 	      
-		}
+			pr($item);  
+		}      
 		$mAdmin = new module_Products();   
 		$categories = array(76933,76932,76934,76936,76935); // grily
 		foreach ($categories as $ite){
@@ -271,7 +272,7 @@ class module_ImportAdmin
 	}   
 
 	public function setProduct($item) 
-	{
+	{   
 		$variant = $d = array();  
 		$contentId = $this->isExists((string)$item->EXT_ID); 
 		$up = $this->db->fetchOne("select update_product from ".$this->_tableVariants." where id_product =?",$contentId->id_product  );

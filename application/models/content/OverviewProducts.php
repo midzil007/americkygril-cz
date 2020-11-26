@@ -105,7 +105,8 @@ class content_OverviewProducts extends content_Overview {
 		$params['znacka']           = $view->inputGet->znacka;
 		$params['onWeb']            = 1;
 		$params['showFirstVariant'] = true;
-		$params['joinOption']       = false;
+		$params['joinOption']       = false;  
+		$params['published']            = 1;
 		$params['category']         = $view->node->nodeId;
 		if ($view->inputGet->sort == 'price') {
 			$view->inputGet->sortType = 'asc';

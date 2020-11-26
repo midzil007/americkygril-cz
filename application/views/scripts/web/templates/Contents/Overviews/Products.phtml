@@ -262,8 +262,11 @@ if(!function_exists('getUrl2')){
 				endif;?>      
 				<span class="priz-<?=$value['id']?>"><?=$value['nazev']?></span>
 			<?endforeach;?>
-	   
-		<?endif;?>
+				
+		<?endif;
+				if($skladem == 4):?>
+					<span class="priz-13"><?=$this->mVarianta->getSklademName($skladem)?></span>	
+				<?endif?>  
 				</div>
 			</div>       
                                 <?=$descr?>       
@@ -327,7 +330,7 @@ if(!function_exists('getUrl2')){
       	<?=$val['title']?><?=$i!=$seoProdutsCount?',':'.'?>
       <?endforeach;?>
       </p>
-          
+            
           <script type="text/javascript">
           	function submitFilter(v, val){ 
               	if(v){ 
