@@ -228,7 +228,7 @@ class module_Cofidis{
         curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt( $ch, CURLOPT_HEADER, true);
-        curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, 30);
+        curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, 5); 
         curl_setopt( $ch, CURLOPT_POST, 1);
         curl_setopt( $ch, CURLOPT_POSTFIELDS, $request_data);
         curl_setopt( $ch, CURLINFO_HEADER_OUT, true);

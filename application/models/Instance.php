@@ -768,20 +768,17 @@ echo json_encode($images);
 			}
 	die;
 }     
-		if($view->inputGet->price){ 
-			$view->input->amount = $view->inputGet->price;    
-			$_SESSION['calculatorUrl'] = $view->predkosik."&nodeId=".$view->inputGet->nodeId."&variant=".$view->inputGet->variant."&count=1&redirect=1&payment=16"; 
- 
-		}     
-		          
-		
-
-		if($_GET['calculator'] == 1){   
-		//	e($import->getProperty()); 	     
-		$view->mCalculator = new module_Calculator($view->input); 
-				echo $view->render('parts/calculator.phtml');
-				die;   
-		}     
+if($view->inputGet->price){ 
+	$view->input->amount = $view->inputGet->price; 
+	$_SESSION['calculatorUrl'] = $view->predkosik."&nodeId=".$view->inputGet->nodeId."&variant=".$view->inputGet->variant."&count=1&redirect=1&payment=16"; 
+}     
+$view->input->url = $_SESSION['calculatorUrl'];   
+if($_GET['calculator'] == 1){  
+		$view->mCalculator = new module_Calculator($view->input);   
+	//  e($import->getProperty());       
+		echo $view->render('parts/calculator.phtml');
+	die;        
+}      
 		  
 		if($view->input->loginEmail && !$view->input->step)    
 		{
